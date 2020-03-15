@@ -353,3 +353,5 @@ healthchecksdb
 MigrationBackup/
 
 # End of https://www.gitignore.io/api/csharp
+TestTask/TestTask/bin/Debug/netcoreapp3.0/nunit_random_seed.tmp
+TestTask/.vs/TestTask/v16/.suo
