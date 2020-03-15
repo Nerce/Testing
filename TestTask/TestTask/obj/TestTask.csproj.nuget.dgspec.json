@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Neringa\\source\\repos\\TestTask\\TestTask\\TestTask.csproj": {}
+    "C:\\Users\\Neringa\\Documents\\GitHub\\Testing\\TestTask\\TestTask\\TestTask.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Neringa\\source\\repos\\TestTask\\TestTask\\TestTask.csproj": {
+    "C:\\Users\\Neringa\\Documents\\GitHub\\Testing\\TestTask\\TestTask\\TestTask.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Neringa\\source\\repos\\TestTask\\TestTask\\TestTask.csproj",
+        "projectUniqueName": "C:\\Users\\Neringa\\Documents\\GitHub\\Testing\\TestTask\\TestTask\\TestTask.csproj",
         "projectName": "TestTask",
-        "projectPath": "C:\\Users\\Neringa\\source\\repos\\TestTask\\TestTask\\TestTask.csproj",
+        "projectPath": "C:\\Users\\Neringa\\Documents\\GitHub\\Testing\\TestTask\\TestTask\\TestTask.csproj",
         "packagesPath": "C:\\Users\\Neringa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Neringa\\source\\repos\\TestTask\\TestTask\\obj\\",
+        "outputPath": "C:\\Users\\Neringa\\Documents\\GitHub\\Testing\\TestTask\\TestTask\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Neringa\\AppData\\Roaming\\NuGet\\NuGet.Config",

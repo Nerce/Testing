@@ -5,16 +5,18 @@ namespace TestTask
 {
 
     [Binding]
-    public class FeatureSteps
+    public class FeatureSteps : GeneralSteps
     {
         private ChromeDriver driver;
         private ScenarioContext scenarioContext;
 
-        public FeatureSteps(ScenarioContext scenarioContext) 
+        public FeatureSteps(ScenarioContext scenarioContext1) : base(scenarioContext1)
         {
-            this.scenarioContext = scenarioContext;
+            this.scenarioContext = scenarioContext1;
             driver = scenarioContext.Get<ChromeDriver>("currentDriver");
+
         }
+
 
         [Given("I have entered username")]
         [When("I have entered username")]

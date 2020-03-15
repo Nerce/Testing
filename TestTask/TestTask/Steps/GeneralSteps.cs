@@ -4,7 +4,6 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Interactions;
 using TechTalk.SpecFlow;
-using TestTask;
 
 namespace TestTask
 {
@@ -12,7 +11,7 @@ namespace TestTask
     [Binding]
     public class GeneralSteps
     {
-        private readonly ChromeDriver driver = new ChromeDriver();
+        private readonly ChromeDriver driver;
         private ScenarioContext scenarioContext;
         public GeneralSteps(ScenarioContext scenarioContext)
         {
@@ -27,12 +26,6 @@ namespace TestTask
             var tab = driver.FindElement(HelperFactory.SelectorByAttributeValue("title", "a"));
             tab.SendKeys("aaaaaa");
             TimeSpan.FromSeconds(10);
-              driver.Quit();
-
-            //  var loginSteps = new LoginSteps();
-            //    loginSteps.GivenIEnteredUsername("a");
-            //    loginSteps.GivenIEnterPassword("a");
-            //   loginSteps.WhenIPressLogin();
         }
 
         [When(@"I navigate to (.*) tab")]

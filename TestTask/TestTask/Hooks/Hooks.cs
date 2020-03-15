@@ -13,34 +13,33 @@ namespace TestTask.Hooks
     {
         private readonly ScenarioContext scenarioContext;
         private ChromeDriver driver;
-        public Hooks (ScenarioContext scenarioContext)
-       {
+        public Hooks(ScenarioContext scenarioContext)
+        {
             this.scenarioContext = scenarioContext;
         }
-    
+
 
         [BeforeScenario]
         public void BeforeScenario()
         {
-               Process[] chromeDriverProcesses = Process.GetProcessesByName("chromedriver");
+            Process[] chromeDriverProcesses = Process.GetProcessesByName("chromedriver");
 
-               foreach (var chromeDriverProcess in chromeDriverProcesses)
-               {
-                   chromeDriverProcess.Kill();
-               }
+            foreach (var chromeDriverProcess in chromeDriverProcesses)
+            {
+                chromeDriverProcess.Kill();
+            }
             driver = new ChromeDriver();
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
             driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(10);
             driver.Manage().Window.Maximize();
             driver.Navigate().GoToUrl("https:/google.lt");
             scenarioContext.Add("currentDriver", driver);
-           // _scenarioContext.Current.Add("currentDriver", driver);
         }
 
         [AfterScenario]
         public void AfterScenario()
         {
-              driver?.Quit();
+            driver?.Quit();
         }
     }
 }
