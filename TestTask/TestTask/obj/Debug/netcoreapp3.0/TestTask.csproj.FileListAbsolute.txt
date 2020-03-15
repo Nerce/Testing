@@ -102,10 +102,10 @@ C:\Users\Neringa\source\repos\TestTask\TestTask\obj\Debug\netcoreapp3.0\TestTask
 C:\Users\Neringa\source\repos\TestTask\TestTask\obj\Debug\netcoreapp3.0\TestTask.csproj.CopyComplete
 C:\Users\Neringa\source\repos\TestTask\TestTask\obj\Debug\netcoreapp3.0\TestTask.dll
 C:\Users\Neringa\source\repos\TestTask\TestTask\obj\Debug\netcoreapp3.0\TestTask.pdb
+C:\Users\Neringa\Documents\GitHub\Testing\TestTask\TestTask\bin\Debug\netcoreapp3.0\TechTalk.SpecFlow.NUnit.SpecFlowPlugin.dll
 C:\Users\Neringa\Documents\GitHub\Testing\TestTask\TestTask\bin\Debug\netcoreapp3.0\NUnit3.TestAdapter.dll
 C:\Users\Neringa\Documents\GitHub\Testing\TestTask\TestTask\bin\Debug\netcoreapp3.0\NUnit3.TestAdapter.pdb
 C:\Users\Neringa\Documents\GitHub\Testing\TestTask\TestTask\bin\Debug\netcoreapp3.0\nunit.engine.netstandard.dll
-C:\Users\Neringa\Documents\GitHub\Testing\TestTask\TestTask\bin\Debug\netcoreapp3.0\TechTalk.SpecFlow.NUnit.SpecFlowPlugin.dll
 C:\Users\Neringa\Documents\GitHub\Testing\TestTask\TestTask\bin\Debug\netcoreapp3.0\TestTask.deps.json
 C:\Users\Neringa\Documents\GitHub\Testing\TestTask\TestTask\bin\Debug\netcoreapp3.0\TestTask.runtimeconfig.json
 C:\Users\Neringa\Documents\GitHub\Testing\TestTask\TestTask\bin\Debug\netcoreapp3.0\TestTask.runtimeconfig.dev.json
