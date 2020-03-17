@@ -22,17 +22,17 @@ namespace TestTask.Hooks
         [BeforeScenario]
         public void BeforeScenario()
         {
-            Process[] chromeDriverProcesses = Process.GetProcessesByName("chromedriver");
+       //     Process[] chromeDriverProcesses = Process.GetProcessesByName("chromedriver");
 
-            foreach (var chromeDriverProcess in chromeDriverProcesses)
-            {
-                chromeDriverProcess.Kill();
-            }
+         //   foreach (var chromeDriverProcess in chromeDriverProcesses)
+         //   {
+          //      chromeDriverProcess.Kill();
+           // }
             driver = new ChromeDriver();
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
             driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(10);
             driver.Manage().Window.Maximize();
-            driver.Navigate().GoToUrl("https:/google.lt");
+            driver.Navigate().GoToUrl("https://zyro.com/");
             scenarioContext.Add("currentDriver", driver);
         }
 

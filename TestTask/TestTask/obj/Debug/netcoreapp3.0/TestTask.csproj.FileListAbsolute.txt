@@ -127,6 +127,7 @@ C:\Users\Neringa\Documents\GitHub\Testing\TestTask\TestTask\bin\Debug\netcoreapp
 C:\Users\Neringa\Documents\GitHub\Testing\TestTask\TestTask\bin\Debug\netcoreapp3.0\testhost.dll
 C:\Users\Neringa\Documents\GitHub\Testing\TestTask\TestTask\bin\Debug\netcoreapp3.0\Newtonsoft.Json.dll
 C:\Users\Neringa\Documents\GitHub\Testing\TestTask\TestTask\bin\Debug\netcoreapp3.0\nunit.framework.dll
+C:\Users\Neringa\Documents\GitHub\Testing\TestTask\TestTask\bin\Debug\netcoreapp3.0\WebDriver.Support.dll
 C:\Users\Neringa\Documents\GitHub\Testing\TestTask\TestTask\bin\Debug\netcoreapp3.0\WebDriver.dll
 C:\Users\Neringa\Documents\GitHub\Testing\TestTask\TestTask\bin\Debug\netcoreapp3.0\TechTalk.SpecFlow.dll
 C:\Users\Neringa\Documents\GitHub\Testing\TestTask\TestTask\bin\Debug\netcoreapp3.0\System.Configuration.ConfigurationManager.dll

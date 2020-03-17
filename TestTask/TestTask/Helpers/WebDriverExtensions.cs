@@ -7,17 +7,18 @@ using TechTalk.SpecFlow;
 
 namespace TestTask
 {
+    [Binding]
     public class WebDriverExtensions
     {
 
-        private  ChromeDriver driver = new ChromeDriver();
+        private ChromeDriver driver;
 
         public WebDriverExtensions(ScenarioContext scenarioContext)
         {
             driver = scenarioContext.Get<ChromeDriver>("currentDriver");
         }
 
-        public IWebElement FindElement(By by, int timeoutInSeconds)
+        public IWebElement FindElement(By by, int timeoutInSeconds=10)
         {
             if (timeoutInSeconds > 0)
             {
