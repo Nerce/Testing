@@ -1,7 +1,6 @@
-﻿using NUnit.Framework;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Support.UI;
+using OpenQA.Selenium.Interactions;
 using System;
 using TechTalk.SpecFlow;
 
@@ -14,57 +13,40 @@ namespace TestTask
         private ChromeDriver driver;
         private ScenarioContext scenarioContext;
 
-        public FeatureSteps(ScenarioContext scenarioContext1) : base(scenarioContext1)
+        public FeatureSteps(ScenarioContext scenarioContext) : base(scenarioContext)
         {
-            this.scenarioContext = scenarioContext1;
+            this.scenarioContext = scenarioContext;
             driver = scenarioContext.Get<ChromeDriver>("currentDriver");
 
         }
 
 
-        [Given("I have entered username")]
-        [When("I have entered username")]
-        public void GivenIEnteredUsername()
+        [Given("I sign in")]
+        [When("I sign in")]
+        public void SignIn()
         {
-            var signInButton = driver.FindElement(HelperFactory.SelectorByAttributeValue("data-qa", "signin-link"));
-            signInButton.Click();
-            var WebDriverExtensions = new WebDriverExtensions(scenarioContext);
-            var element = WebDriverExtensions.FindElement(By.CssSelector("h1.h2.h4--desktop"), 10);
-            string el1 = element.GetAttribute("innerText").ToString();
-            string pageH1Element = "Sign In to Zyro";
-            Assert.That(el1.Equals(pageH1Element), "Not Equal to " + el1);
-
-            var emailAddress = driver.FindElement(HelperFactory.SelectorByAttributeValue("data-qa", "signin-inputfield-emailaddress"));
-            System.Threading.Thread.Sleep(1000);
-            emailAddress.SendKeys("neringa.g@mailinator.com");
-            var password = driver.FindElement(HelperFactory.SelectorByAttributeValue("id", "password"));
-            password.SendKeys("testas123");
+            ClickTheButtonByAttributeValue("Sign In", "data-qa", "signin-link");
+            CheckIfElementContainsText("Sign In to Zyro", "h1.h2.h4--desktop");
+            User u = new User();
+            u.FillInWithUserData();
+            EnterTextIntoTextField(u.Email, "Email Address", "data-qa", "signin-inputfield-emailaddress");
+            EnterTextIntoTextField(u.Password, "Password", "id", "password");
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
             driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(10);
-            var submitButton = driver.FindElement(HelperFactory.SelectorByAttributeValue("data-qa", "auth-submit-button"));
-            submitButton.Click();
-            var element1 = WebDriverExtensions.FindElement(By.CssSelector("h2.welcome__title.h1.h3--desktop "));
-            string el2 = element1.GetAttribute("innerText").ToString();
-            string pageH1Element1 = "Let’s create your first website";
-            Assert.That(el2.Equals(pageH1Element1), "Not Equal to " + el2);
+            ClickTheButtonByAttributeValue("Submit", "data-qa", "auth-submit-button");
+            var WebDriverExtensions = new WebDriverExtensions(scenarioContext);
+            if (IsElementPresent(By.ClassName("button-close__container")))
+            {
+
+                ClickTheButtonByAttributeValue(String.Empty, "class", "button-close__container");
+                ClickTheButtonByAttributeValue(String.Empty, "class", "button-close__container");
+            }
+
+            CheckIfElementContainsText("You don't have any websites yet. Click Get Started to create your first website.", "h5");
+            Actions action = new Actions(driver);
+            var element = driver.FindElement(HelperFactory.SelectorByAttributeValue("data-qa", "popupwindow-icon-userprofile"));
+            action.MoveToElement(element).Perform();
+            ClickTheButtonByAttributeValue(String.Empty, "data-qa", "popupwindow-link-logout");
         }
-    //    public IWebElement WaitUntilElementExists(By elementLocator, int timeout = 10)
-     //   {
-         //   try
-         //   {
-         //       var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(timeout));
-         //       return wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(elementLocator));
-         //   }
-          //  catch (NoSuchElementException)
-          //  {
-         // / / /    Console.WriteLine("Element with locator: '" + elementLocator + "' was not found in current context page.");
-            //    throw;
-          //  }
-           // catch (StaleElementReferenceException)
-          //  {
-          //      Console.WriteLine("Element with locator: '" + elementLocator + "' was not found in current context page.");
-           //     throw;
-           // }
-       // }
     }
 }

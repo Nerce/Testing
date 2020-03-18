@@ -22,12 +22,12 @@ namespace TestTask.Hooks
         [BeforeScenario]
         public void BeforeScenario()
         {
-       //     Process[] chromeDriverProcesses = Process.GetProcessesByName("chromedriver");
+            Process[] chromeDriverProcesses = Process.GetProcessesByName("chromedriver");
 
-         //   foreach (var chromeDriverProcess in chromeDriverProcesses)
-         //   {
-          //      chromeDriverProcess.Kill();
-           // }
+            foreach (var chromeDriverProcess in chromeDriverProcesses)
+            {
+                chromeDriverProcess.Kill();
+            }
             driver = new ChromeDriver();
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
             driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(10);

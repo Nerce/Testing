@@ -1,8 +1,6 @@
 ﻿Feature: Feature
-	In order to avoid silly mistakes
-	As a math idiot
-	I want to be told the sum of two numbers
+	Log into the system
 
 @mytag
-Scenario: Add two numbers
-	Given I have entered username
+Scenario: Log into the system
+	When I sign in

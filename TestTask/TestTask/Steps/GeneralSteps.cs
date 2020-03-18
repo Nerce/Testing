@@ -2,7 +2,6 @@
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Interactions;
 using TechTalk.SpecFlow;
 
 namespace TestTask
@@ -28,38 +27,40 @@ namespace TestTask
             TimeSpan.FromSeconds(10);
         }
 
-        [When(@"I navigate to (.*) tab")]
-        public void WhenINavigateToTab(string tabName)
+        public void ClickTheButtonByAttributeValue(string buttonName, string atribute, string atrributeValue)
         {
-            var tab = driver.FindElement(HelperFactory.SelectorByAttributeValue("title", tabName));
-            Assert.IsTrue(tab.Displayed);
-            tab.Click();
+            var button = driver.FindElement(HelperFactory.SelectorByAttributeValue(atribute, atrributeValue));
+            button.Click();
         }
-
-        [Then(@"I should see (.*) grid")]
-        public void WhenISeeGrid(string gridName)
+        public bool CheckIfElementContainsText(string text, string selector)
         {
-            var grid = driver.FindElement(HelperFactory.SelectorByAttributeValue("role", "grid"));
-            Assert.IsTrue(grid.Displayed);
-            grid.Click();
+            var WebDriverExtensions = new WebDriverExtensions(scenarioContext);
+            var element = WebDriverExtensions.FindElement(By.CssSelector(selector));
+            string elementInnerText = element.GetAttribute("innerText").ToString();
+            bool IsElementContainText = elementInnerText.Equals(text);
+            Assert.That(IsElementContainText, "Not Equal to " + elementInnerText);
+            return IsElementContainText;
         }
-
-        [When(@"I click on the (.*) tab")]
-
-        public void WhenIGoToTheTab(string tabText)
+        public void EnterTextIntoTextField(string text, string textFieldName, string atribute, string atrributeValue)
         {
-            var tab = driver.FindElement(By.LinkText(tabText));
-            tab.Click();
+            var WebDriverExtensions = new WebDriverExtensions(scenarioContext);
+            var textField = WebDriverExtensions.FindElement(HelperFactory.SelectorByAttributeValue(atribute, atrributeValue));
+            System.Threading.Thread.Sleep(5000);
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
+            driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(10);
+            textField.SendKeys(text);
         }
-
-        [When(@"I go into (.*) details")]
-
-        public void WhenIGoIntoDetails(string name)
+        public bool IsElementPresent(By by)
         {
-            var gridRow = driver.FindElement(By.XPath("//tr[@data-kendo-grid-item-index=\"0\"]"));
-            var ac = new Actions(driver);
-
-            ac.DoubleClick(gridRow).Perform();
+            try
+            {
+                driver.FindElement(by);
+                return true;
+            }
+            catch (NoSuchElementException)
+            {
+                return false;
+            }
         }
     }
 }
