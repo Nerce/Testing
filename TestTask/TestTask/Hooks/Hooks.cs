@@ -1,8 +1,5 @@
 ﻿using OpenQA.Selenium.Chrome;
-using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Text;
 using TechTalk.SpecFlow;
 
 namespace TestTask.Hooks
@@ -29,8 +26,6 @@ namespace TestTask.Hooks
                 chromeDriverProcess.Kill();
             }
             driver = new ChromeDriver();
-            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
-            driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(10);
             driver.Manage().Window.Maximize();
             driver.Navigate().GoToUrl("https://zyro.com/");
             scenarioContext.Add("currentDriver", driver);

@@ -1,12 +1,8 @@
 ﻿using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using TechTalk.SpecFlow;
 
 namespace TestTask
 {
-    [Binding]
     public class HelperFactory
     {
         public static By SelectorByAttributeValue(string pStrAttributeName, string pStrAttributeValue)

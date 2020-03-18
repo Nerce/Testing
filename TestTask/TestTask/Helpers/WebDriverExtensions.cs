@@ -7,7 +7,7 @@ using TechTalk.SpecFlow;
 
 namespace TestTask
 {
-    [Binding]
+
     public class WebDriverExtensions
     {
 
@@ -39,30 +39,6 @@ namespace TestTask
                 Console.WriteLine("Element with locator: '" + driver.FindElement(by) + "' was not found in current context page.");
                 throw;
             }
-        }
-
-        public ReadOnlyCollection<IWebElement> FindElements(By by, int timeoutInSeconds)
-        {
-            if (timeoutInSeconds > 0)
-            {
-                var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(timeoutInSeconds));
-                return wait.Until(driver => (driver.FindElements(by).Count > 0) ? driver.FindElements(by) : null);
-            }
-            return driver.FindElements(by);
-        }
-        public IWebElement FindSearchElement(ISearchContext context, By by, uint timeout, bool displayed = false)
-        {
-            var wait = new DefaultWait<ISearchContext>(context);
-            wait.Timeout = TimeSpan.FromSeconds(timeout);
-            wait.IgnoreExceptionTypes(typeof(NoSuchElementException));
-            return wait.Until(ctx =>
-            {
-                var elem = ctx.FindElement(by);
-                if (displayed && !elem.Displayed)
-                    return null;
-
-                return elem;
-            });
         }
     }
 }

@@ -18,15 +18,6 @@ namespace TestTask
             driver = scenarioContext.Get<ChromeDriver>("currentDriver");
         }
 
-        [When(@"I Log In")]
-
-        public void LoginToTheSystem()
-        {
-            var tab = driver.FindElement(HelperFactory.SelectorByAttributeValue("title", "a"));
-            tab.SendKeys("aaaaaa");
-            TimeSpan.FromSeconds(10);
-        }
-
         public void ClickTheButtonByAttributeValue(string buttonName, string atribute, string atrributeValue)
         {
             var button = driver.FindElement(HelperFactory.SelectorByAttributeValue(atribute, atrributeValue));
@@ -45,9 +36,7 @@ namespace TestTask
         {
             var WebDriverExtensions = new WebDriverExtensions(scenarioContext);
             var textField = WebDriverExtensions.FindElement(HelperFactory.SelectorByAttributeValue(atribute, atrributeValue));
-            System.Threading.Thread.Sleep(5000);
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
-            driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(10);
             textField.SendKeys(text);
         }
         public bool IsElementPresent(By by)
