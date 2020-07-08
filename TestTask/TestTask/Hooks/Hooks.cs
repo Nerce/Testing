@@ -1,6 +1,8 @@
 ﻿using OpenQA.Selenium.Chrome;
 using System.Diagnostics;
 using TechTalk.SpecFlow;
+using TestTask.Helpers;
+using TestTask.WebElements;
 
 namespace TestTask.Hooks
 {
@@ -8,12 +10,12 @@ namespace TestTask.Hooks
     [Binding]
     public sealed class Hooks
     {
-        private readonly ScenarioContext scenarioContext;
+        //   private readonly ScenarioContext scenarioContext;
         private ChromeDriver driver;
-        public Hooks(ScenarioContext scenarioContext)
-        {
-            this.scenarioContext = scenarioContext;
-        }
+        //    public Hooks(ScenarioContext scenarioContext)
+        //    {
+        //        this.scenarioContext = scenarioContext;
+        //    }
 
 
         [BeforeScenario]
@@ -27,8 +29,9 @@ namespace TestTask.Hooks
             }
             driver = new ChromeDriver();
             driver.Manage().Window.Maximize();
-            driver.Navigate().GoToUrl("https://zyro.com/");
-            scenarioContext.Add("currentDriver", driver);
+            driver.Navigate().GoToUrl("https://testkantoorgemak.crm4.dynamics.com/");
+            LoginToMicrosoftAccount login = new LoginToMicrosoftAccount(driver);
+            login.LoginToMicrosoftAccount1();
         }
 
         [AfterScenario]

@@ -8,11 +8,14 @@
     ".NETCoreApp,Version=v3.0": {
       "TestTask/1.0.0": {
         "dependencies": {
+          "DotNetSeleniumExtras.PageObjects": "3.11.0",
+          "DotNetSeleniumExtras.WaitHelpers": "3.11.0",
           "Microsoft.NET.Test.Sdk": "16.2.0",
           "NUnit3TestAdapter": "3.13.0",
+          "Otp.NET": "1.2.2",
           "Selenium.Support": "3.141.0",
           "Selenium.WebDriver": "3.141.0",
-          "Selenium.WebDriver.ChromeDriver": "80.0.3987.10600",
+          "Selenium.WebDriver.ChromeDriver": "83.0.4103.3900",
           "SpecFlow.NUnit": "3.1.86",
           "SpecFlow.Tools.MsBuild.Generation": "3.1.86",
           "NUnit": "3.12.0"
@@ -37,6 +40,28 @@
           "lib/netstandard2.0/Cucumber.Messages.dll": {
             "assemblyVersion": "6.0.1.0",
             "fileVersion": "6.0.1.0"
+          }
+        }
+      },
+      "DotNetSeleniumExtras.PageObjects/3.11.0": {
+        "dependencies": {
+          "Selenium.WebDriver": "3.141.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/SeleniumExtras.PageObjects.dll": {
+            "assemblyVersion": "3.11.0.0",
+            "fileVersion": "3.11.0.0"
+          }
+        }
+      },
+      "DotNetSeleniumExtras.WaitHelpers/3.11.0": {
+        "dependencies": {
+          "Selenium.WebDriver": "3.141.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/SeleniumExtras.WaitHelpers.dll": {
+            "assemblyVersion": "3.11.0.0",
+            "fileVersion": "3.11.0.0"
           }
         }
       },
@@ -439,6 +464,14 @@
           "System.Xml.XmlDocument": "4.3.0"
         }
       },
+      "Otp.NET/1.2.2": {
+        "runtime": {
+          "lib/netstandard2.0/Otp.NET.dll": {
+            "assemblyVersion": "1.2.2.0",
+            "fileVersion": "1.2.2.0"
+          }
+        }
+      },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {},
       "runtime.fedora.23-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {},
       "runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {},
@@ -503,7 +536,7 @@
           }
         }
       },
-      "Selenium.WebDriver.ChromeDriver/80.0.3987.10600": {},
+      "Selenium.WebDriver.ChromeDriver/83.0.4103.3900": {},
       "SpecFlow/3.1.86": {
         "dependencies": {
           "BoDi": "1.4.1",
@@ -1383,6 +1416,20 @@
       "path": "cucumber.messages/6.0.1",
       "hashPath": "cucumber.messages.6.0.1.nupkg.sha512"
     },
+    "DotNetSeleniumExtras.PageObjects/3.11.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-DJCLQ3beq1fzqpeQ5jTZwDqmzbOD2Xxsb/jCyShYam88CNwGGn5aBBqu4LVSj0sy0Ai76OauQQncYlC48VvQUQ==",
+      "path": "dotnetseleniumextras.pageobjects/3.11.0",
+      "hashPath": "dotnetseleniumextras.pageobjects.3.11.0.nupkg.sha512"
+    },
+    "DotNetSeleniumExtras.WaitHelpers/3.11.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xc6jVVl5ymgk3ZNWnC/KHxkEup1QpnwYbrwF+NQoCOGERsD8YMlLwmsX4lGhLXCLo/YQTRTIwlKCN9E/doGUNg==",
+      "path": "dotnetseleniumextras.waithelpers/3.11.0",
+      "hashPath": "dotnetseleniumextras.waithelpers.3.11.0.nupkg.sha512"
+    },
     "Gherkin/6.0.0": {
       "type": "package",
       "serviceable": true,
@@ -1494,6 +1541,13 @@
       "sha512": "sha512-9OlA81APTyR/tNkapK2a2dlz4jFra7/Bm1eYT1P1lIq2cJv4OYtWD5uHj3XsO1dz3btiwbIFrWBtZNr/ebRhSw==",
       "path": "nunit3testadapter/3.13.0",
       "hashPath": "nunit3testadapter.3.13.0.nupkg.sha512"
+    },
+    "Otp.NET/1.2.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2hrZfkbzeWJ3tNXXt/1beg4IY+nS4F3gIfh4NVFvW0f6Pj51hGpiJ4prBz7Dmrr4ZYrA96rTERVGieZ4xYm7jA==",
+      "path": "otp.net/1.2.2",
+      "hashPath": "otp.net.1.2.2.nupkg.sha512"
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
       "type": "package",
@@ -1614,12 +1668,12 @@
       "path": "selenium.webdriver/3.141.0",
       "hashPath": "selenium.webdriver.3.141.0.nupkg.sha512"
     },
-    "Selenium.WebDriver.ChromeDriver/80.0.3987.10600": {
+    "Selenium.WebDriver.ChromeDriver/83.0.4103.3900": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-rw0CV+If3GzxEYlNt0dXVUwpbBccIx1m9CFebg0oe0yncgcuA4mmx9c5UTYVd3FB+eN4ZPiy0wZg+X0Ryn9jUw==",
-      "path": "selenium.webdriver.chromedriver/80.0.3987.10600",
-      "hashPath": "selenium.webdriver.chromedriver.80.0.3987.10600.nupkg.sha512"
+      "sha512": "sha512-lbVAHeSPf5E0IJNtsO5sf1rQhaA1ePoHfaA3o2XZBMsQVDOkM1WpDeTe9KyuPKabdluUvVbt7vkufxlZLCGJ6w==",
+      "path": "selenium.webdriver.chromedriver/83.0.4103.3900",
+      "hashPath": "selenium.webdriver.chromedriver.83.0.4103.3900.nupkg.sha512"
     },
     "SpecFlow/3.1.86": {
       "type": "package",

@@ -20,8 +20,8 @@ namespace TestTask
                     Password = "";
                     break;
                 default:;
-                    Email = "neringa.g@mailinator.com";
-                    Password = "testas123";
+                    Email = "";
+                    Password = "";
                     break;
             }
 

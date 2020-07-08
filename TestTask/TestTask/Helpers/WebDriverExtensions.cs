@@ -2,8 +2,6 @@
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
 using System;
-using System.Collections.ObjectModel;
-using TechTalk.SpecFlow;
 
 namespace TestTask
 {
@@ -13,10 +11,10 @@ namespace TestTask
 
         private ChromeDriver driver;
 
-        public WebDriverExtensions(ScenarioContext scenarioContext)
+        public WebDriverExtensions(ChromeDriver driver)
         {
-            driver = scenarioContext.Get<ChromeDriver>("currentDriver");
-        }
+            this.driver = driver;
+       }
 
         public IWebElement FindElement(By by, int timeoutInSeconds = 10)
         {

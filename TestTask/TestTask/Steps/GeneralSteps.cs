@@ -25,7 +25,7 @@ namespace TestTask
         }
         public bool CheckIfElementContainsText(string text, string selector)
         {
-            var WebDriverExtensions = new WebDriverExtensions(scenarioContext);
+            var WebDriverExtensions = new WebDriverExtensions(driver);
             var element = WebDriverExtensions.FindElement(By.CssSelector(selector));
             string elementInnerText = element.GetAttribute("innerText").ToString();
             bool IsElementContainText = elementInnerText.Equals(text);
@@ -34,7 +34,7 @@ namespace TestTask
         }
         public void EnterTextIntoTextField(string text, string textFieldName, string atribute, string atrributeValue)
         {
-            var WebDriverExtensions = new WebDriverExtensions(scenarioContext);
+            var WebDriverExtensions = new WebDriverExtensions(driver);
             var textField = WebDriverExtensions.FindElement(HelperFactory.SelectorByAttributeValue(atribute, atrributeValue));
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
             textField.SendKeys(text);

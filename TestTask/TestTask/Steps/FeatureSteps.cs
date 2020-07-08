@@ -1,6 +1,8 @@
 ﻿using NUnit.Framework;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Interactions;
+using OpenQA.Selenium.Internal;
 using System;
 using TechTalk.SpecFlow;
 

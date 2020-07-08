@@ -113,6 +113,7 @@ C:\Users\Neringa\Documents\GitHub\Testing\TestTask\TestTask\bin\Debug\netcoreapp
 C:\Users\Neringa\Documents\GitHub\Testing\TestTask\TestTask\bin\Debug\netcoreapp3.0\TestTask.pdb
 C:\Users\Neringa\Documents\GitHub\Testing\TestTask\TestTask\bin\Debug\netcoreapp3.0\BoDi.dll
 C:\Users\Neringa\Documents\GitHub\Testing\TestTask\TestTask\bin\Debug\netcoreapp3.0\Cucumber.Messages.dll
+C:\Users\Neringa\Documents\GitHub\Testing\TestTask\TestTask\bin\Debug\netcoreapp3.0\SeleniumExtras.PageObjects.dll
 C:\Users\Neringa\Documents\GitHub\Testing\TestTask\TestTask\bin\Debug\netcoreapp3.0\Gherkin.dll
 C:\Users\Neringa\Documents\GitHub\Testing\TestTask\TestTask\bin\Debug\netcoreapp3.0\Google.Protobuf.dll
 C:\Users\Neringa\Documents\GitHub\Testing\TestTask\TestTask\bin\Debug\netcoreapp3.0\Microsoft.VisualStudio.CodeCoverage.Shim.dll
@@ -127,6 +128,7 @@ C:\Users\Neringa\Documents\GitHub\Testing\TestTask\TestTask\bin\Debug\netcoreapp
 C:\Users\Neringa\Documents\GitHub\Testing\TestTask\TestTask\bin\Debug\netcoreapp3.0\testhost.dll
 C:\Users\Neringa\Documents\GitHub\Testing\TestTask\TestTask\bin\Debug\netcoreapp3.0\Newtonsoft.Json.dll
 C:\Users\Neringa\Documents\GitHub\Testing\TestTask\TestTask\bin\Debug\netcoreapp3.0\nunit.framework.dll
+C:\Users\Neringa\Documents\GitHub\Testing\TestTask\TestTask\bin\Debug\netcoreapp3.0\Otp.NET.dll
 C:\Users\Neringa\Documents\GitHub\Testing\TestTask\TestTask\bin\Debug\netcoreapp3.0\WebDriver.Support.dll
 C:\Users\Neringa\Documents\GitHub\Testing\TestTask\TestTask\bin\Debug\netcoreapp3.0\WebDriver.dll
 C:\Users\Neringa\Documents\GitHub\Testing\TestTask\TestTask\bin\Debug\netcoreapp3.0\TechTalk.SpecFlow.dll
@@ -206,4 +208,6 @@ C:\Users\Neringa\Documents\GitHub\Testing\TestTask\TestTask\obj\Debug\netcoreapp
 C:\Users\Neringa\Documents\GitHub\Testing\TestTask\TestTask\obj\Debug\netcoreapp3.0\TestTask.csproj.CopyComplete
 C:\Users\Neringa\Documents\GitHub\Testing\TestTask\TestTask\obj\Debug\netcoreapp3.0\TestTask.dll
 C:\Users\Neringa\Documents\GitHub\Testing\TestTask\TestTask\obj\Debug\netcoreapp3.0\TestTask.pdb
-C:\Users\Neringa\Documents\GitHub\Testing\TestTask\TestTask\obj\Debug\netcoreapp3.0\TestTask.csprojAssemblyReference.cache
+C:\Users\Neringa\Documents\GitHub\Testing\TestTask\TestTask\obj\Debug\netcoreapp3.0\TestTask.genruntimeconfig.cache
+C:\Users\Neringa\Documents\GitHub\Testing\TestTask\TestTask\bin\Debug\netcoreapp3.0\SeleniumExtras.WaitHelpers.dll
+C:\Users\Neringa\Documents\GitHub\Testing\TestTask\TestTask\obj\Debug\netcoreapp3.0\TestTask.csproj.CoreCompileInputs.cache
